@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Anya & Matt – Wedding</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <title>Anya & Matt — Wedding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Optional: Google Font for clean typography -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Modern, playful sans-serifs -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Link to your stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <header class="hero">
-    <h1>Anya & Matt</h1>
-    <p class="date"> Date here · Location here</p>
+  <header class="site-header">
+    <div class="container">
+      <h1>Anya &amp; Matt</h1>
+      <p class="subtle">Date here · Location here</p>
+    </div>
   </header>
 
-  <section id="details">
-    <h2>Details</h2>
-    <p>Ceremony at <strong>XXXX</strong> · Reception at <strong>XXXX</strong></p>
-    Your presence is a present -- we do not expect any gifts. 
-  </section>
+  <main class="container two-col">
+    <!-- Left: Gallery -->
+    <aside class="gallery" aria-label="Photo gallery">
+      <!-- replace img/1.jpg etc with your photos -->
+      <img src="img/1.jpg" alt="Anya and Matt 1" class="thumb" />
+      <img src="img/2.jpg" alt="Anya and Matt 2" class="thumb" />
+      <img src="img/3.jpg" alt="Anya and Matt 3" class="thumb" />
+    </aside>
 
-  <section id="rsvp">
-    <h2>RSVP by DATE</h2>
-    <p><a href="https://forms.gle/yourformlink" class="button">RSVP Here</a></p>
-  </section>
+    <!-- Right: Details + RSVP -->
+    <section class="content">
+      <section id="details" class="card">
+        <h2>Details</h2>
+        <p>Ceremony at <strong>XXXX</strong> · Reception at <strong>XXXX</strong></p>
+        <p class="note">Your presence is the gift — we kindly request no gifts.</p>
+      </section>
+
+      <section id="rsvp" class="card">
+        <h2>RSVP by DATE</h2>
+        <p><a href="https://forms.gle/yourformlink" class="button">RSVP Here</a></p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>We can’t wait to celebrate with you!</p>
+    </div>
+  </footer>
+
+  <!-- Lightweight modal for viewing photos -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" alt="">
+  </div>
 
   <script src="script.js"></script>
 </body>
