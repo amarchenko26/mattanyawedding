@@ -1,16 +1,16 @@
-/* French Château Elegant Wedding Website */
+/* French Château Wedding Website — Letterpress Inspired */
 
 :root {
-  /* Color palette inspired by French elegance */
-  --cream: #ffffff;
-  --ivory: #fafaf9;
-  --gold: #a89968;
-  --rose: #8b7355;
+  /* Château-inspired earthy palette */
+  --cream: #faf9f7;
+  --white: #ffffff;
+  --green: #757a4e;
+  --brick: #73533e;
+  --light-green: #cfd4b9;
   --charcoal: #2a2a2a;
   --slate: #4a4a4a;
-  --light-gray: #efefed;
-  --border: #d4d0cc;
-  --accent: #8a8278;
+  --light-gray: #e5e3e0;
+  --border: #d4cfc8;
 
   /* Typography */
   --serif: "Playfair Display", Georgia, serif;
@@ -27,7 +27,6 @@
 
   /* Sizing */
   --max-width: 1100px;
-  --border-radius: 2px;
 }
 
 * {
@@ -68,12 +67,14 @@ h2 {
   font-weight: 700;
   margin-bottom: var(--spacing-lg);
   letter-spacing: -0.3px;
+  color: var(--green);
 }
 
 h3 {
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: var(--spacing-md);
+  color: var(--charcoal);
 }
 
 h4 {
@@ -88,13 +89,13 @@ p {
 }
 
 a {
-  color: var(--gold);
+  color: var(--green);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--rose);
+  color: var(--brick);
 }
 
 /* ========================
@@ -120,15 +121,16 @@ a:hover {
 
 .password-container {
   text-align: center;
-  background: var(--ivory);
+  background: var(--white);
   padding: var(--spacing-2xl);
-  border: 1px solid var(--border);
+  border: 2px solid var(--light-green);
   max-width: 450px;
   width: 90%;
 }
 
 .password-container h1 {
   margin-bottom: var(--spacing-sm);
+  color: var(--green);
 }
 
 .password-subtitle {
@@ -149,8 +151,8 @@ a:hover {
   font-family: var(--sans);
   font-size: 1rem;
   padding: var(--spacing-md);
-  border: 1px solid var(--border);
-  background: white;
+  border: 1px solid var(--light-green);
+  background: var(--white);
   color: var(--charcoal);
   text-align: center;
   letter-spacing: 0.15em;
@@ -159,7 +161,7 @@ a:hover {
 
 #passwordInput:focus {
   outline: none;
-  border-color: var(--gold);
+  border-color: var(--green);
 }
 
 .password-button {
@@ -167,7 +169,7 @@ a:hover {
   font-size: 0.95rem;
   font-weight: 600;
   padding: var(--spacing-md);
-  background: var(--gold);
+  background: var(--green);
   color: white;
   border: none;
   cursor: pointer;
@@ -177,7 +179,7 @@ a:hover {
 }
 
 .password-button:hover {
-  background-color: var(--rose);
+  background-color: var(--brick);
 }
 
 .password-error {
@@ -206,9 +208,9 @@ a:hover {
 
 /* Header */
 .site-header {
-  background: linear-gradient(135deg, var(--ivory) 0%, var(--cream) 100%);
+  background: var(--white);
   padding: var(--spacing-2xl) var(--spacing-lg);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--light-green);
   text-align: center;
 }
 
@@ -219,6 +221,7 @@ a:hover {
 
 .page-title {
   margin-bottom: var(--spacing-sm);
+  color: var(--green);
 }
 
 .page-subtitle {
@@ -231,8 +234,8 @@ a:hover {
 
 /* Navigation */
 .site-nav {
-  background: white;
-  border-bottom: 1px solid var(--border);
+  background: var(--cream);
+  border-bottom: 1px solid var(--light-green);
   padding: var(--spacing-md) var(--spacing-lg);
   position: sticky;
   top: 0;
@@ -264,12 +267,12 @@ a:hover {
 }
 
 .nav-button:hover {
-  color: var(--gold);
+  color: var(--green);
 }
 
 .nav-button.active {
-  color: var(--gold);
-  border-bottom-color: var(--gold);
+  color: var(--green);
+  border-bottom-color: var(--green);
 }
 
 /* Main Content */
@@ -320,7 +323,7 @@ a:hover {
   gap: var(--spacing-xl);
   margin-top: var(--spacing-xl);
   padding-top: var(--spacing-xl);
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--light-green);
 }
 
 .fact {
@@ -332,7 +335,7 @@ a:hover {
   font-family: var(--sans);
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--slate);
+  color: var(--green);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: var(--spacing-xs);
@@ -353,7 +356,7 @@ a:hover {
   width: 100%;
   height: auto;
   display: block;
-  border: 1px solid var(--border);
+  border: 3px solid var(--light-green);
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -376,7 +379,7 @@ a:hover {
   height: auto;
   max-height: 400px;
   object-fit: cover;
-  border: 1px solid var(--border);
+  border: 3px solid var(--light-green);
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -391,7 +394,7 @@ a:hover {
 }
 
 .timeline-day {
-  border-left: 2px solid var(--gold);
+  border-left: 3px solid var(--light-green);
   padding-left: var(--spacing-xl);
   margin-left: var(--spacing-lg);
   padding-top: var(--spacing-md);
@@ -401,6 +404,7 @@ a:hover {
 .day-title {
   font-size: 1.5rem;
   margin-bottom: var(--spacing-xs);
+  color: var(--green);
 }
 
 .day-subtitle {
@@ -425,16 +429,17 @@ a:hover {
 }
 
 .event.highlight {
-  background: rgba(197, 169, 133, 0.05);
+  background: rgba(207, 212, 185, 0.3);
   padding: var(--spacing-md);
   margin-left: calc(-1 * var(--spacing-md));
   margin-right: calc(-1 * var(--spacing-md));
   padding-left: var(--spacing-lg);
+  border-left: 3px solid var(--green);
 }
 
 .event-time {
   font-weight: 600;
-  color: var(--gold);
+  color: var(--green);
   font-size: 0.9rem;
   flex-shrink: 0;
 }
@@ -452,7 +457,7 @@ a:hover {
 .dress-code {
   margin-top: var(--spacing-xl);
   padding-top: var(--spacing-md);
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--light-green);
   display: flex;
   align-items: baseline;
   gap: var(--spacing-md);
@@ -470,7 +475,7 @@ a:hover {
 .dress-value {
   font-family: var(--serif-secondary);
   font-size: 1.1rem;
-  color: var(--charcoal);
+  color: var(--green);
 }
 
 .dress-details {
@@ -506,7 +511,7 @@ a:hover {
 }
 
 .faq-item {
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--light-green);
   padding: var(--spacing-lg) 0;
 }
 
@@ -532,12 +537,12 @@ a:hover {
 }
 
 .faq-question:hover {
-  color: var(--gold);
+  color: var(--green);
 }
 
 .faq-toggle {
   font-size: 1.5rem;
-  color: var(--gold);
+  color: var(--green);
   transition: transform 0.3s ease;
   flex-shrink: 0;
   margin-left: var(--spacing-md);
@@ -572,13 +577,13 @@ a:hover {
 }
 
 .detail-link {
-  color: var(--gold);
+  color: var(--green);
   font-weight: 600;
   text-decoration: none;
 }
 
 .detail-link:hover {
-  color: var(--rose);
+  color: var(--brick);
   text-decoration: underline;
 }
 
@@ -602,7 +607,7 @@ a:hover {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  border: 1px solid var(--border);
+  border: 3px solid var(--light-green);
   cursor: pointer;
   transition: transform 0.2s ease;
   display: block;
@@ -665,8 +670,8 @@ a:hover {
    ======================== */
 
 .site-footer {
-  background: var(--ivory);
-  border-top: 1px solid var(--border);
+  background: var(--white);
+  border-top: 1px solid var(--light-green);
   padding: var(--spacing-xl) var(--spacing-lg);
   text-align: center;
   margin-top: var(--spacing-2xl);
@@ -687,6 +692,7 @@ a:hover {
   font-style: italic;
   font-size: 0.95rem;
   margin-top: var(--spacing-md) !important;
+  color: var(--green);
 }
 
 /* ========================
@@ -743,8 +749,8 @@ a:hover {
     font-size: 0.75rem;
   }
 
-  .details-grid {
-    grid-template-columns: 1fr;
+  .faq-container {
+    width: 100%;
   }
 
   .event {
