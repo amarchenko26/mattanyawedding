@@ -311,6 +311,14 @@ a:hover {
   .overview-grid {
     grid-template-columns: 1fr;
   }
+
+  .overview-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-tall {
+    min-height: 350px;
+  }
 }
 
 .overview-text h2 {
@@ -349,12 +357,20 @@ a:hover {
 }
 
 .overview-gallery {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: stretch;
+}
+
+.gallery-stack {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--spacing-lg);
 }
 
 .gallery-image {
   width: 100%;
-  height: auto;
   display: block;
   border: 3px solid var(--light-green);
   cursor: pointer;
@@ -363,6 +379,17 @@ a:hover {
 
 .gallery-image:hover {
   transform: scale(0.98);
+}
+
+.gallery-square {
+  height: 250px;
+  object-fit: cover;
+}
+
+.gallery-tall {
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
 }
 
 /* ========================
@@ -376,9 +403,9 @@ a:hover {
 
 .schedule-image {
   width: 100%;
-  height: auto;
-  max-height: 400px;
+  height: 350px;
   object-fit: cover;
+  object-position: center;
   border: 3px solid var(--light-green);
   cursor: pointer;
   transition: transform 0.2s ease;
