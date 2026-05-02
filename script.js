@@ -62,6 +62,16 @@ navButtons.forEach((button) => {
   });
 });
 
+// FAQ Accordion functionality
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach((question) => {
+  question.addEventListener('click', () => {
+    const faqItem = question.closest('.faq-item');
+    faqItem.classList.toggle('open');
+  });
+});
+
 // Gallery / Lightbox functionality
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
