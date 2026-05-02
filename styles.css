@@ -369,23 +369,43 @@ a:hover {
    SCHEDULE SECTION
    ======================== */
 
-.schedule-header-image {
-  margin-bottom: var(--spacing-xl);
-  max-width: 100%;
+.schedule-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: start;
 }
 
-.schedule-image {
+.schedule-content {
+  flex: 1;
+}
+
+.schedule-image-container {
+  position: sticky;
+  top: var(--spacing-xl);
+}
+
+.schedule-side-image {
   width: 100%;
-  height: 350px;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
+  display: block;
   border: 3px solid var(--light-green);
   cursor: pointer;
   transition: transform 0.2s ease;
 }
 
-.schedule-image:hover {
+.schedule-side-image:hover {
   transform: scale(0.98);
+}
+
+@media (max-width: 1024px) {
+  .schedule-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-image-container {
+    position: static;
+  }
 }
 
 .timeline {
