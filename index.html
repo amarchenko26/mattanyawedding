@@ -5,50 +5,271 @@
   <title>Matt & Anya — Wedding</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Modern, playful sans-serifs -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Elegant, classic fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:wght@400;500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Matt &amp; Anya</h1>
-      <p class="subtle">Date here · Location here</p>
+  <!-- Password modal -->
+  <div id="passwordModal" class="password-modal active">
+    <div class="password-container">
+      <h1>Matt & Anya</h1>
+      <p class="password-subtitle">October 9–11, 2026 · Château de la Bûcherie</p>
+      <form id="passwordForm" class="password-form">
+        <input
+          type="password"
+          id="passwordInput"
+          placeholder="Enter password"
+          autocomplete="off"
+          aria-label="Password"
+        />
+        <button type="submit" class="password-button">Enter</button>
+      </form>
+      <p class="password-error" id="passwordError"></p>
     </div>
-  </header>
+  </div>
 
-  <main class="container two-col">
-    <!-- Left: Gallery -->
-    <aside class="gallery" aria-label="Photo gallery">
-      <!-- replace img/1.jpg etc with your photos -->
-      <img src="mattanya1.png" alt="Anya and Matt 1" class="thumb" />
-      <!-- <img src="img/2.jpg" alt="Anya and Matt 2" class="thumb" /> -->
-      <!-- <img src="img/3.jpg" alt="Anya and Matt 3" class="thumb" /> -->
-    </aside>
+  <!-- Main site content -->
+  <div id="siteContent" class="site-content">
+    <header class="site-header">
+      <div class="header-content">
+        <h1 class="page-title">Matt & Anya</h1>
+        <p class="page-subtitle">October 9–11, 2026 · Château de la Bûcherie, France</p>
+      </div>
+    </header>
 
-    <!-- Right: Details + RSVP -->
-    <section class="content">
-      <section id="details" class="card">
-        <h2>Details</h2>
-        <p>Ceremony at <strong>XXXX</strong> · Reception at <strong>XXXX</strong></p>
-        <p class="note"> We kindly request no gifts. </p>
+    <nav class="site-nav">
+      <div class="nav-container">
+        <button class="nav-button active" data-section="overview">Overview</button>
+        <button class="nav-button" data-section="schedule">Schedule</button>
+        <button class="nav-button" data-section="details">Details</button>
+        <button class="nav-button" data-section="gallery">Gallery</button>
+      </div>
+    </nav>
+
+    <main class="site-main">
+      <!-- Overview Section -->
+      <section id="overview" class="section-content">
+        <div class="section-container">
+          <div class="overview-grid">
+            <div class="overview-text">
+              <h2>Welcome</h2>
+              <p>We're thrilled to invite you to celebrate our wedding at the enchanting Château de la Bûcherie in the heart of France. Join us for three days of elegance, joy, and cherished memories.</p>
+
+              <div class="quick-facts">
+                <div class="fact">
+                  <span class="fact-label">When</span>
+                  <span class="fact-value">October 9–11, 2026</span>
+                </div>
+                <div class="fact">
+                  <span class="fact-label">Where</span>
+                  <span class="fact-value">Château de la Bûcherie, France</span>
+                </div>
+                <div class="fact">
+                  <span class="fact-label">Distance from Paris</span>
+                  <span class="fact-value">~50 minutes</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="overview-gallery">
+              <img src="mattanya1.png" alt="Matt & Anya" class="gallery-image clickable" />
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section id="rsvp" class="card">
-        <h2>RSVP by DATE</h2>
-        <p><a href="https://forms.gle/yourformlink" class="button">RSVP Here</a></p>
+      <!-- Schedule Section -->
+      <section id="schedule" class="section-content hidden">
+        <div class="section-container">
+          <h2>Celebration Schedule</h2>
+
+          <div class="timeline">
+            <!-- Friday -->
+            <div class="timeline-day">
+              <h3 class="day-title">Friday, October 9</h3>
+              <p class="day-subtitle">Arrival & Welcome Dinner</p>
+
+              <div class="events">
+                <div class="event">
+                  <div class="event-time">4:00 PM</div>
+                  <div class="event-details">
+                    <h4>Arrival at Château</h4>
+                    <p>Check in and settle into your room.</p>
+                  </div>
+                </div>
+
+                <div class="event">
+                  <div class="event-time">6:30 PM</div>
+                  <div class="event-details">
+                    <h4>Cocktail & Canapés Dinner</h4>
+                    <p>Toasts and mingling as we begin our celebration together.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dress-code">
+                <span class="dress-label">Dress Code:</span>
+                <span class="dress-value">Cocktail Attire</span>
+              </div>
+            </div>
+
+            <!-- Saturday -->
+            <div class="timeline-day">
+              <h3 class="day-title">Saturday, October 10</h3>
+              <p class="day-subtitle">Wedding Day</p>
+
+              <div class="events">
+                <div class="event">
+                  <div class="event-time">Morning</div>
+                  <div class="event-details">
+                    <h4>French Breakfast</h4>
+                    <p>A leisurely morning meal at the château.</p>
+                  </div>
+                </div>
+
+                <div class="event">
+                  <div class="event-time">Throughout Day</div>
+                  <div class="event-details">
+                    <h4>Yoga, Running & Free Time</h4>
+                    <p>Explore the château grounds and enjoy the countryside.</p>
+                  </div>
+                </div>
+
+                <div class="event">
+                  <div class="event-time">12:00 PM</div>
+                  <div class="event-details">
+                    <h4>Picnic Lunch</h4>
+                    <p>Alfresco dining in a scenic location.</p>
+                  </div>
+                </div>
+
+                <div class="event highlight">
+                  <div class="event-time">5:00 PM – 3:00 AM</div>
+                  <div class="event-details">
+                    <h4>Ceremony, Reception & Dancing</h4>
+                    <p>Our wedding ceremony, followed by dinner, toasts, and dancing until dawn.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dress-code">
+                <span class="dress-label">Dress Code:</span>
+                <span class="dress-value">Black Tie Optional</span>
+                <p class="dress-details">Wear a tuxedo if you already have one, but no need to purchase one. Dark suits and long dresses. We welcome non-American formal attire (Indian, Chinese, etc.).</p>
+              </div>
+            </div>
+
+            <!-- Sunday -->
+            <div class="timeline-day">
+              <h3 class="day-title">Sunday, October 11</h3>
+              <p class="day-subtitle">Farewell Brunch</p>
+
+              <div class="events">
+                <div class="event">
+                  <div class="event-time">Early Morning</div>
+                  <div class="event-details">
+                    <h4>French Breakfast</h4>
+                  </div>
+                </div>
+
+                <div class="event">
+                  <div class="event-time">11:30 AM – 2:30 PM</div>
+                  <div class="event-details">
+                    <h4>French Brunch</h4>
+                    <p>Our final meal together before departure.</p>
+                  </div>
+                </div>
+
+                <div class="event">
+                  <div class="event-time">2:30 PM</div>
+                  <div class="event-details">
+                    <h4>Check Out & Departure</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dress-code">
+                <span class="dress-label">Dress Code:</span>
+                <span class="dress-value">Casual</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>We can’t wait to celebrate with you!</p>
-    </div>
-  </footer>
+      <!-- Details Section -->
+      <section id="details" class="section-content hidden">
+        <div class="section-container">
+          <h2>Things to Know</h2>
 
-  <!-- Lightweight modal for viewing photos -->
+          <div class="details-grid">
+            <div class="detail-card">
+              <h3>Accommodations</h3>
+              <p>All guests will be provided a room at the château. We may need to place some guests with roommates, but will reach out to you in advance before doing so.</p>
+              <p><strong>Alternative:</strong> If you prefer separate lodging, guests are free to book accommodations in the nearby village.</p>
+            </div>
+
+            <div class="detail-card">
+              <h3>Transportation</h3>
+              <p>The château is approximately 50 minutes by car from Paris. While guests are responsible for their own transport, we will do our best to help.</p>
+              <p><strong>Carpooling:</strong> Please let us know if you are renting a car so we can arrange a carpool spreadsheet.</p>
+            </div>
+
+            <div class="detail-card">
+              <h3>Plus Ones</h3>
+              <p>After careful consideration, unfortunately we won't be able to accommodate plus ones. We have directly invited all attendees. While we'd love for everyone to bring their partners, we'd quickly run out of space at the château.</p>
+              <p>Thank you for your understanding!</p>
+            </div>
+
+            <div class="detail-card">
+              <h3>Paris Before the Wedding</h3>
+              <p>Many guests will want to sightsee in Paris. Anya and Matt will be staying at <strong>[Hotel Name — Coming Soon]</strong> starting Tuesday, October 6.</p>
+              <p>Feel free to book a room in the same hotel or nearby and hang out with us! This is not an official part of the wedding, but we'd love to see you.</p>
+            </div>
+
+            <div class="detail-card">
+              <h3>Gifts</h3>
+              <p>We do not expect any gifts — your presence in Paris is a huge gift in itself! If you insist, we have listed a few items we'd appreciate <a href="#" class="detail-link">[Link Coming Soon]</a>.</p>
+            </div>
+
+            <div class="detail-card">
+              <h3>Cocktail Attire Guide</h3>
+              <p><strong>For Friday evening:</strong> Cocktail attire is elegant but slightly less formal than black tie. Think dressy separates, a nice dress, or a blazer with dress pants.</p>
+              <p><a href="#" class="detail-link">More details on dress codes →</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="section-content hidden">
+        <div class="section-container">
+          <h2>Gallery</h2>
+          <p class="gallery-intro">A glimpse of the château, Paris, and us.</p>
+
+          <div class="gallery-grid">
+            <img src="mattanya1.png" alt="Matt & Anya" class="gallery-thumb clickable" />
+            <!-- Add more images as you obtain them:
+            <img src="img/chateau.jpg" alt="Château de la Bûcherie" class="gallery-thumb clickable" />
+            <img src="img/paris.jpg" alt="Paris" class="gallery-thumb clickable" />
+            <img src="img/hotel.jpg" alt="Hotel in Paris" class="gallery-thumb clickable" />
+            -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>We can't wait to celebrate with you in the heart of France.</p>
+        <p class="footer-date">October 2026</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Image viewer modal -->
   <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
     <button class="lightbox-close" aria-label="Close">&times;</button>
     <img id="lightbox-img" alt="">
