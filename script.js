@@ -1,11 +1,21 @@
 // Password Protection
-const PASSWORD = 'pierre';
+const PASSWORD_HASH = 'd5a5d66b94e8da0cf63d4cd6d66cd489d78e77b697039c6c48e3ff8d81752139';
 
 const passwordModal = document.getElementById('passwordModal');
 const passwordForm = document.getElementById('passwordForm');
 const passwordInput = document.getElementById('passwordInput');
 const passwordError = document.getElementById('passwordError');
 const siteContent = document.getElementById('siteContent');
+
+// Hash function using SubtleCrypto
+async function hashPassword(password) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(password);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  return hashHex;
+}
 
 // Check if already authenticated in this session
 function initAuth() {
@@ -18,11 +28,12 @@ function initAuth() {
   }
 }
 
-passwordForm.addEventListener('submit', (e) => {
+passwordForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const input = passwordInput.value;
+  const inputHash = await hashPassword(input);
 
-  if (input === PASSWORD) {
+  if (inputHash === PASSWORD_HASH) {
     sessionStorage.setItem('weddingAuth', 'true');
     unlockSite();
   } else {
