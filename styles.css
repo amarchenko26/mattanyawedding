@@ -65,7 +65,7 @@ h1 {
 h2 {
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 700;
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
   letter-spacing: -0.3px;
   color: var(--green);
 }
@@ -209,7 +209,7 @@ a:hover {
 /* Header */
 .site-header {
   background: var(--white);
-  padding: var(--spacing-2xl) var(--spacing-lg);
+  padding: var(--spacing-lg) var(--spacing-lg);
   border-bottom: 1px solid var(--light-green);
   text-align: center;
 }
@@ -236,7 +236,7 @@ a:hover {
 .site-nav {
   background: var(--cream);
   border-bottom: 1px solid var(--light-green);
-  padding: var(--spacing-md) var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-lg);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -279,7 +279,7 @@ a:hover {
 .site-main {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: var(--spacing-2xl) var(--spacing-lg);
+  padding: var(--spacing-lg) var(--spacing-lg);
 }
 
 .section-content {
@@ -320,9 +320,9 @@ a:hover {
 .quick-facts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-xl);
-  margin-top: var(--spacing-xl);
-  padding-top: var(--spacing-xl);
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
   border-top: 1px solid var(--light-green);
 }
 
