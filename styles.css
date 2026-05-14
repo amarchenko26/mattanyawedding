@@ -62,6 +62,13 @@ h1 {
   line-height: 1.1;
 }
 
+.ampersand {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.15em;
+}
+
 h2 {
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 700;
