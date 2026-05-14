@@ -66,7 +66,8 @@ h1 {
   font-family: "Lora", Georgia, serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 0.9em;
+  font-size: 0.75em;
+  vertical-align: 0.05em;
 }
 
 h2 {
