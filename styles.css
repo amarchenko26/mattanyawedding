@@ -338,6 +338,18 @@ a:hover {
   flex-direction: column;
 }
 
+.fact--full {
+  grid-column: 1 / -1;
+}
+
+.fact-subvalue {
+  font-family: var(--serif-secondary);
+  font-size: 0.95rem;
+  color: var(--slate);
+  margin-top: 0.25rem;
+  display: block;
+}
+
 .fact-label {
   font-family: var(--sans);
   font-size: 0.8rem;
@@ -353,6 +365,18 @@ a:hover {
   font-size: 1.2rem;
   color: var(--charcoal);
   font-weight: 500;
+}
+
+.fact-value a {
+  color: var(--green);
+  text-decoration: underline;
+  text-decoration-color: var(--light-green);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.fact-value a:hover {
+  text-decoration-color: var(--green);
 }
 
 .overview-gallery {
