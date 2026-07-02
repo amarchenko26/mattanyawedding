@@ -630,6 +630,11 @@ a:hover {
   margin-bottom: 0;
 }
 
+.faq-answer a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .detail-link {
   color: var(--green);
   font-weight: 600;
